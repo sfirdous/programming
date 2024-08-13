@@ -10,5 +10,5 @@ int main()
         printf("%d\t",i);
         fact = fact * i;
     }
-    printf("Factorial is %.2f\n",fact);
+    printf("\nFactorial is %.2f\n",fact);
 }
