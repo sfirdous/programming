@@ -2,8 +2,7 @@
 
 int main()
 {
-    
-    
+    /**### Easy
     // 1. **Print numbers from 1 to 10 using a `for` loop.**
     for(int i = 1; i<10;++i)
     {
@@ -54,8 +53,79 @@ int main()
     {
         printf("Enter Password: ");
         scanf("%d",&pass);
-    } while (pass != correct_pass);
+    } while (pass != correct_pass);**/
+
+    // ### Medium
+    // 8. **Write a `for` loop to print a multiplication table for the number 5 (i.e., 5x1, 5x2, ..., 5x10).**
+    for (int  i = 1; i <= 10; i++)
+    {
+        printf("5 X %d = %d\n",i,5*i);
+    }
     
+    // 9. **Use a `while` loop to calculate the factorial of a given number.**
+    int num;
+    printf("Enter Number: ");
+    scanf("%d",&num);
+    int factorial = 1;
+    while(num > 1)
+    {
+       
+       factorial *= num;
+       --num; 
+       printf("%d\t",factorial);
+       
+    }
+    printf("Factorial %d\n",factorial);
+
+    // 10. **Create a `do-while` loop that prompts the user for input and prints the input until the user enters "111".**
+    int input;
+    do
+    {
+        printf("Enter Input: ");
+        scanf("%d",&input);
+    } while (input != 111);
+
+    // 11. **Write a program to find the sum of all even numbers between 1 and 50 using a `for` loop.**
+    int sum = 0;
+    for (int i = 1; i <= 50; i++)
+    {
+        if(i%2 == 0)
+           sum += i;
+    }
+    printf("Sum %d\n",sum);
+    
+
+    // 12. **Use a `while` loop to print the Fibonacci sequence up to the 10th term.**
+    int fibo = 0,n1 = 0,n2 = 1,nth = 10,n=0;
+    printf("0\t1\t");
+    while (n < nth - 2)
+    {
+        fibo = n1+n2;
+        printf("%d\t",fibo);
+        n1 = n2;
+        n2 = fibo;
+        ++n;
+    }
+    
+
+    // 13. **Create a program that prints a triangle pattern of stars using nested `for` loops.**
+
+
+    // 14. **Write a `for` loop that prints the first 10 terms of the series 2, 4, 8, 16, ... (powers of 2).**
+    int power = 2;
+    for (int i = 1; i <= 10; i++)
+    {
+        printf("%d\t",power);
+        power *= 2;
+    }
+    
+    // 15. **Use a `do-while` loop to repeatedly ask the user to enter a number until the number is greater than 100.**
+    int input;
+    do
+    {
+        printf("Enter Number: ");
+        scanf("%d",&input);
+    } while (input < 100);
     
     
     
