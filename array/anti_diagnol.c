@@ -4,7 +4,7 @@ int main()
     int n,m;
     printf("Enter n and m: ");
     scanf("%d%d",&n,&m);
-    int mat[n][n];
+    int mat[n][m];
     int sum = 0;
     for (int row = 0;row < n; ++row)
     {
