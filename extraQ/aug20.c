@@ -108,40 +108,7 @@ int main()
     // }
 
     // 13. **Create a program that prints a triangle pattern of stars using nested `for` loops.**
-<<<<<<< HEAD
-    
-    int sum = 0;
-    for(int i = 0 ; i < 3 ; ++i){
-        sum =4;
-        for (int j = 0; j < 5; ++j)
-        {    sum++;
-             if(i+j == sum){
-                printf("*");
-             }else{
-                printf(" ");
-             }
-        }
-        
-        printf("\n");
-        
-        
-    }
-=======
-int n;
-    printf("Enter n: ");
-    scanf("%d",&n);
-    for(int i = 1 ; i <= n; ++i){
-        for(int j = n; j >= i ; --j){ 
-             if(j <= i){
-                 printf(" *");
-             }
-             
-        }
-        printf("\n");
-               
-        }
-
->>>>>>> 7c68a6a3c4436df270d67f7cad8907f6292fe23b
+            
 
     // 14. **Write a `for` loop that prints the first 10 terms of the series 2, 4, 8, 16, ... (powers of 2).**
     // int power = 2;
