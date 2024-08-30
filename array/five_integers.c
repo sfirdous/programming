@@ -7,7 +7,14 @@ int main()
     for (int i = 0; i < n; i++)
     {
         printf("Enter the %d element: ",i+1);
-        scanf("%d",&array[i]);
+        scanf("%d",&array[i]);      
+    }
+
+
+    printf("Elements of array\n");
+    for (int i = 0; i < n; i++)
+    {
+        printf("%d Element: %d\n",i+1,array[i]);
     }
     
 }
