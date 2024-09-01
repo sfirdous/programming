@@ -142,48 +142,57 @@ int main()
     // ###Hard
     // 1. **Use nested `for` loops to create a program that generates Pascal’s triangle up to a specified number of rows.**
 
-    int n, c;
-    printf("Enter n: ");
-    scanf("%d", &n);
-    for (int i = 0; i < n; ++i)
-    {
-        for (int j = 0; j <= i; ++j)
-        {
-            if (i == 0 || j == 0)
-                c = 1;
-            else
-                c = (c * (i - j + 1)) / j;
-            printf("%d ",c);
-        }
-        printf("\n");
-    }
+    // int n, c;
+    // printf("Enter n: ");
+    // scanf("%d", &n);
+    // for (int i = 0; i < n; ++i)
+    // {
+    //     for (int j = 0; j <= i; ++j)
+    //     {
+    //         if (i == 0 || j == 0)
+    //             c = 1;
+    //         else
+    //             c = (c * (i - j + 1)) / j;
+    //         printf("%d ",c);
+    //     }
+    //     printf("\n");
+    // }
 
     // 2. **Write a program using a `while` loop to find the nth prime number.**
     // int nth;
     // printf("Enter n: ");
     // scanf("%d",&nth);
-    // int flag = 1;
-    // int number = 2;
-    // while(number <= nth)
+    // int flag,number_c=0;
+    // int number = 1;
+    // while(nth != number_c)
     // {
-    //     int i = 2;
-    //     while(i <= number)
+    //     flag = 0;
+    //     number++;
+    //     for (int i = 2; i <= (number/2); i++)
     //     {
     //         if (number % i == 0)
-    //         {
-    //             flag = 0;
-    //             break;
-    //         }
+    //             flag = 1;
 
     //     }
-    //     printf("%d",number);
-    //     ++number;
+    //     if(flag == 0){
+    //             number_c++;
+    //     }
+
     // }
+    // printf("%d prime number is %d",nth,number);
 
     // 3. **Write a `do-while` loop that simulates rolling a pair of dice until a double (same number on both dice) is rolled.**
-    // int dice1;
-    // int dice2;
-    // do{
+    srand(time(0));
+    int dice1;
+    int dice2;
+    do
+    {
+        dice1 = rand() % 6 + 1;
+        dice2 = rand() % 6 + 1;
 
-    // }while(dice1 != dice2);
+        printf("Rolled Diced : %d and %d\n",dice1,dice2);
+
+    } while (dice1 != dice2);
+
+    printf("Doubled Rolled Diced : %d and %d\n",dice1,dice2);
 }
