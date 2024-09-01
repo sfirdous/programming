@@ -110,25 +110,18 @@ int main()
     // 13. **Create a program that prints a triangle pattern of stars using nested `for` loops.**
     // Online C compiler to run C program online
 
-   int n = 5;
-    for (int i = 1; i <= n; ++i)
-    { 
-        for (int j = n; j >= 1; --j)
-        {
-            // printf("Inside for j");
-            if (i>=j){  printf("* ");}
-              
-            else{printf(" ");}
-                
-            
-        }
-        printf("\n");
-        
-    }
+    //    int n = 5;
+    //     for (int i = 1; i <= n; ++i)
+    //     {
+    //         for (int j = n; j >= 1; --j)
+    //         {
+    //             // printf("Inside for j");
+    //             if (i>=j){  printf("* ");}
+    //             else{printf(" ");}
+    //         }
+    //         printf("\n");
 
- 
-    
-            
+    //     }
 
     // 14. **Write a `for` loop that prints the first 10 terms of the series 2, 4, 8, 16, ... (powers of 2).**
     // int power = 2;
@@ -149,6 +142,22 @@ int main()
     // ###Hard
     // 1. **Use nested `for` loops to create a program that generates Pascal’s triangle up to a specified number of rows.**
 
+    int n, c;
+    printf("Enter n: ");
+    scanf("%d", &n);
+    for (int i = 0; i < n; ++i)
+    {
+        for (int j = 0; j <= i; ++j)
+        {
+            if (i == 0 || j == 0)
+                c = 1;
+            else
+                c = (c * (i - j + 1)) / j;
+            printf("%d ",c);
+        }
+        printf("\n");
+    }
+
     // 2. **Write a program using a `while` loop to find the nth prime number.**
     // int nth;
     // printf("Enter n: ");
@@ -165,7 +174,7 @@ int main()
     //             flag = 0;
     //             break;
     //         }
-            
+
     //     }
     //     printf("%d",number);
     //     ++number;
