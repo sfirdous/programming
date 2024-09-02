@@ -11,17 +11,17 @@ int main()
         while (number != 0)
         {
             digit = number % 10;
-            // printf("%d\n", digit);
+           
             number_square += digit * digit;
             number /= 10;
-            // printf("%d\n", number);
+            
         }
-        // printf("%d\n", number_square);
+    
         number = number_square;
         number_square = 0;
         digit = 0;
     }
-    // printf("%d\n", number_square);
+  
     if(number == 1)
         printf("true");
     else 
