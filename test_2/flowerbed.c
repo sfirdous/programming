@@ -1,6 +1,6 @@
 #include <stdio.h>
-
-bool flowerbed()
+#include<stdbool.h>
+bool flowerbed(int flowerbed[],int n)
 {
 }
 int main()
@@ -15,5 +15,11 @@ int main()
     {
         printf("Flower : 1 \t No Flower : 0 ");
         scanf("%d",&flowerbed[i]);
+    }
+
+    printf("\n");
+    for (int i = 0; i < n; ++i)
+    {
+        printf("%d\t",flowerbed[i]);
     }
 }
