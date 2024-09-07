@@ -2,11 +2,11 @@
 #include <stdbool.h>
 bool plot_flowers(int flowerbed[],int n, int new_f)
 {
-    int plotted;
+    
     for (int i = 0; i < n; ++i)
     {
-        bool left;
-        bool right;
+        bool left = false;
+        bool right = false;
         if (flowerbed[i] == 0)
         {
             if (i == 0 || flowerbed[i - 1] == 0){
@@ -18,11 +18,11 @@ bool plot_flowers(int flowerbed[],int n, int new_f)
             if (left && right)
             {
                 flowerbed[i] = 1;
-                plotted++;
+                new_f--;
             }
         }
     }
-    return new_f<=plotted;
+    return new_f;
 }
 int main()
 {
@@ -46,15 +46,14 @@ int main()
     {
         printf("%d\t", flowerbed[i]);
     }
+     printf("\n");
 
     bool plotted = plot_flowers(flowerbed, n, new_f);
-    if (plotted)
-    {
-        printf("true\n");
+    if (plotted){
+        printf("%d\n",plotted);
     }
-    else
-    {
-        printf("false\n");
+    else{
+         printf("%d\n",plotted);
     }
 
     for (int i = 0; i < n; ++i)
