@@ -15,7 +15,7 @@ int main() {
         fibo = n1 + n2;
         printf("%d\t",fibo);
         n1 = n2;
-        n2 = fibo; //
+        n2 = fibo; 
     }
     return 0;
 }
