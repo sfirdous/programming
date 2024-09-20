@@ -8,8 +8,11 @@ int main() {
    
    int *nums = calloc(n,sizeof(n));
    printf("Enter array elements\n");
-   for(int i = 0; i< n;++i){
+   //using while loop
+   int i = 0;
+   while(i<n){
        scanf("%d",&nums[i]);
+       i++;
    }
     
 
