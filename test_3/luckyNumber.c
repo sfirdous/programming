@@ -5,7 +5,7 @@
 int main()
 {
     int rows, cols;
-    bool lucky = false;
+    int min_row, max_col;
     printf("Enter rows and cols of matrix: ");
     scanf("%d%d", &rows, &cols);
     // int **mat = (int*)malloc(rows*sizeof(int)); // using malloc;
@@ -36,28 +36,31 @@ int main()
     }
 
     int row_min, col_max = mat[0][0];
-    for (int k = 0; k < rows; ++k)
+    for (int r = 0; r < rows; ++r)
     {
-        row_min = mat[k][0];
         for (int c = 0; c < cols; ++c)
         {
-            if (mat[k][c] < row_min)
+            min_row = mat[r][0];
+            for (int i = 0; i < cols; i++)
             {
-                row_min = mat[k][c];
-            }
-            for (int r = 0; r < rows; ++r)
-            {
-                col_max = mat[0][c];
-                if (col_max < mat[r][c])
+                if (min_row > mat[r][i])
                 {
-                    col_max = mat[r][c];
+                    min_row = mat[r][i];
                 }
             }
-            // printf("Row Min%d\n", row_min);
-            // printf("Col Max%d\n", col_max);
-            if (row_min == col_max)
+
+            max_col = mat[0][c];
+            for (int i = 0; i < rows; i++)
             {
-                printf("lucky : %d\n", row_min);
+                if (max_col < mat[i][c])
+                {
+                    max_col = mat[i][c];
+                }
+                
+            }
+
+            if(max_col == min_row){
+                printf("lucky: %d\n",min_row);
             }
         }
     }
