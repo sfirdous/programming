@@ -1,6 +1,5 @@
 
 #include <stdio.h>
-
 int main() {
     int n,n1 = 0,n2 = 1,fibo=0;
     printf("Enter the limit ");
