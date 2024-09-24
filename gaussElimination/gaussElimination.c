@@ -1,26 +1,24 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
-void accept_mat(int **mat,int n,int m){
-    printf("\nEnter matrix Elements: ");
+void accept_mat(int **mat, int n, int m)
+{
     for (int r = 0; r < n; r++)
     {
         for (int c = 0; c < m; c++)
         {
-            scanf("%d",&mat[r][c]);
+            scanf("%d", &mat[r][c]);
         }
-        
     }
-    
 }
 
-void display_mat(int **mat,int n,int m){
+void display_mat(int **mat, int n, int m)
+{
     for (int r = 0; r < n; r++)
     {
         for (int c = 0; c < m; c++)
         {
-            printf("%d ",mat[r][c]);
+            printf("%d ", mat[r][c]);
         }
         printf("\n");
     }
@@ -34,7 +32,7 @@ int main()
     int **A = calloc(n, sizeof(n));
     for (int r = 0; r < n; r++)
     {
-        A[r] = calloc(m, sizeof(m));
+        A[r] = calloc(m + 1, sizeof(m));
         if (A[r] == NULL)
         {
             printf("error");
@@ -44,11 +42,38 @@ int main()
             }
 
             free(A);
+            exit(0);
         }
     }
 
-    accept_mat(A,n,m);
-    display_mat(A,n,m);
+    printf("\nEnter matrix: ");
+    accept_mat(A, n, m);
+    display_mat(A, n, m);
+
+    int pivot;
+    for (int r = 0; r < n; r++)
+    {
+        pivot = A[r][r];
+        if(pivot != 1){
+            for (int c = 0; c < m; c++)
+            {
+                A[r][c] = A[r][c] / pivot;
+            }
+        }
+
+        for (int r1 = r+1; r1 < n; r1++)
+        {
+            int e = A[r1][r];
+            for (int c = r; c < m; c++)
+            {
+                A[r1][c] = A[r1][c] - r*A[r][c];
+            }
+            
+        }
+        
+    }
+    
+    display_mat(A, n, m);
 
     return 0;
 }
