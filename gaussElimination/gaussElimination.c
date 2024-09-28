@@ -30,7 +30,7 @@ int main()
     scanf("%d%d", &n, &m);
 
     int **A = calloc(n, sizeof(n));
-    for (int r = 0; r < n; r++)
+    for (int r = 0; r < n; r++)//dynamically allocating memory for matrix
     {
         A[r] = calloc(m + 1, sizeof(m));
         if (A[r] == NULL)
