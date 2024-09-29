@@ -75,5 +75,14 @@ int main()
     
     display_mat(A, n, m);
 
+    int ans[n] = {0};
+
+    for(int row = n-1 ; row >=0 ; ++row){
+
+        ans[row] = A[row][m-1];
+        for(int col = 0 ; col < m; ++col){
+            ans[row] -= A[row][col]*ans[col]; 
+        }
+    }
     return 0;
 }
