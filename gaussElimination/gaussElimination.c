@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void accept_mat(int **mat, int n, int m)
+void accept_mat(int **mat, int n, int m) //function to accept matrix
 {
     for (int r = 0; r < n; r++)
     {
@@ -12,7 +12,7 @@ void accept_mat(int **mat, int n, int m)
     }
 }
 
-void display_mat(int **mat, int n, int m)
+void display_mat(int **mat, int n, int m) //function to display matrix
 {
     for (int r = 0; r < n; r++)
     {
@@ -30,7 +30,7 @@ int main()
     scanf("%d%d", &n, &m);
 
     int **A = calloc(n, sizeof(n));
-    for (int r = 0; r < n; r++)
+    for (int r = 0; r < n; r++)//dynamically allocating memory for matrix
     {
         A[r] = calloc(m + 1, sizeof(m));
         if (A[r] == NULL)
