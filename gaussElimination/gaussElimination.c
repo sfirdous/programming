@@ -1,4 +1,4 @@
-#include <stdio.h>
+ii#include <stdio.h>
 #include <stdlib.h>
 
 void accept_mat(int **mat, int n, int m) //function to accept matrix
@@ -76,7 +76,7 @@ int main()
     display_mat(A, n, m);
 
     int ans[n] = {0};
-
+    //back substitution 
     for(int row = n-1 ; row >=0 ; ++row){
 
         ans[row] = A[row][m-1];
