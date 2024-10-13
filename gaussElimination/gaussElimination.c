@@ -84,6 +84,10 @@ int main()
             ans[row] -= A[row][col]*ans[col]; 
         }
     }
+
+    for(int r = 0; r< n;++r){
+        printf("x%d : %d",r+1,and[r])
+    }
     return 0;
 
 }
