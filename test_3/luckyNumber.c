@@ -33,24 +33,7 @@ void matrixAccept(int **mat, int rows, int cols)
 
 void displayLucky(int **mat, int rows, int cols)
 {
-}
-
-int main()
-{
-    int rows, cols;
-
-    printf("Enter the number of rows and columns: ");
-    scanf("%d%d", &rows, &cols);
-
-    int **mat = (int **)malloc(rows * sizeof(int));
-
-    matrixAllocation(mat, rows, cols);
-    printf("Enter matrix\n");
-    matrixAccept(mat, rows, cols);
-    // displayLucky(mat,rows,cols);
-
-
-    int min,max;
+     int min,max;
     
     for (int i = 0; i < rows; i++)
     {
@@ -75,4 +58,22 @@ int main()
                 printf("lucky %d", min);
         }
     }
+}
+
+int main()
+{
+    int rows, cols;
+
+    printf("Enter the number of rows and columns: ");
+    scanf("%d%d", &rows, &cols);
+
+    int **mat = (int **)malloc(rows * sizeof(int));
+
+    matrixAllocation(mat, rows, cols);
+    printf("Enter matrix\n");
+    matrixAccept(mat, rows, cols);
+    displayLucky(mat,rows,cols);
+
+
+   
 }
