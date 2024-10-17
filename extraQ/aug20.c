@@ -11,7 +11,6 @@ int main()
 
     }
 
-
     // 2. **Write a `while` loop that prints the first 5 natural numbers.**
     int n = 1;
     while (n <= 5)
