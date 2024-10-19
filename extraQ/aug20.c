@@ -195,3 +195,5 @@ int main()
 
     printf("Doubled Rolled Diced : %d and %d\n",dice1,dice2);
 }
+
+
