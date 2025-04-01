@@ -5,9 +5,9 @@ using namespace std;
 int main()
 {
     DecimalToBase d(16, 16);
-    if (d.convert()) {
-        std::cout << d.getConverted() << std::endl;
-    }
+    string asnwer = d.convert();
+
+    cout << asnwer << endl;
     
 
     return 0;

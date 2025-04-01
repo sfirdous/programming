@@ -9,39 +9,30 @@ DecimalToBase::DecimalToBase()
 DecimalToBase::DecimalToBase(int b,int n)
 {
     base = b;
-    n = number;
+    number = n;
 }
     
 
-bool DecimalToBase::convert()
+std::string DecimalToBase::convert()
 {
     if (base < 2 || base > 36)
-        return false; // Invalid base check
+        return "Invalid Base"; // Invalid base check
 
-    if (number == 0) { 
-        converted = "0"; // Special case for zero
-        return true;
+    if (number == 0) {  // Special case for zero
+        return "0";
     }
 
-    unsigned long quotient = number; // Ensure correct initialization
-    converted = ""; // Clear previous results
+    std::string result = ""; 
+    int temp = number;
+    const char digits[] = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-    std::string temp;
-
-    while (quotient > 0)
+    while (temp > 0)
     {
-        int remainder = quotient % base;
+        result = digits[temp % base] + result;
 
-        if (remainder < 10)
-            temp.push_back(remainder + '0');  // Convert to character '0'-'9'
-        else
-            temp.push_back(remainder - 10 + 'A');  // Convert to character 'A'-'Z'
-
-        quotient /= base;
+        temp /= base;
     }
 
-    // Reverse the result
-    converted = std::string(temp.rbegin(), temp.rend());
 
-    return true;
+    return result;
 }

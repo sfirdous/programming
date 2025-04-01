@@ -4,7 +4,6 @@ class DecimalToBase{
     private:
     int base;
     int number;
-    std::string converted;
 
     public:
     DecimalToBase();
@@ -12,11 +11,10 @@ class DecimalToBase{
 
     int getBase(){return this->base;}
     int getNumber(){return this->number;}
-    std::string getConverted(){return converted;}
 
     void setBase(int b){this->base = b;}
     void setNumber(int n){this->number = n;}
 
 
-    bool convert();
+    std::string convert();
 };
