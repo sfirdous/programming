@@ -20,3 +20,17 @@ x = Complex(3,4)
 print(x.r)
 print(x.i)
 
+
+class Dog:
+    
+    kind = 'cannie'  #class variable
+    def __init__(self,name):
+        self.name = name #instace variable
+     
+d = Dog('john')
+e = Dog('elf')
+print(d.kind)
+print(e.kind)
+
+print(d.name)
+print(e.name)
